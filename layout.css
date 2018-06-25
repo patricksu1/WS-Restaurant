@@ -1,0 +1,76 @@
+body{
+	/*background: url("chicken_corn_soup.jpeg") no-repeat fixed center;*/
+	background-size:cover;
+	font-size:15px;
+	background-color:#f7f4ea;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+}
+#header{
+	margin: auto;
+	padding: 10px 10px;
+	width: 50%;
+	height:30%;
+
+}
+#header #logo{
+	margin:auto;
+	display: block;
+}
+#header h1{
+	font-size:50px;
+	color: purple;
+	text-align: center;
+}
+h2{
+	font-size:25px;
+	color:#4286f4;
+}
+div.content{
+	position: absolute;
+	top:30%;
+	left: 30%;
+	margin: auto;
+	padding:10px 10px;
+	width: 50%;
+	/*background: url("pkq.jpg") no-repeat fixed center;*/
+	background-size:cover;
+
+}
+#toolBar{
+
+	position: fixed;
+	width:10%;
+
+	top:30%;
+	left:10%;
+
+}
+#t1{
+	font-size:15px;
+	padding: 0 0;
+	list-style-type: none;
+}
+#t1 a, #t2 a {
+	display: block;
+	padding: 8px 16px;
+	color: black;
+	text-decoration: none;
+}
+#t1 a:hover,#t2 a:hover{
+	font-size: 200%;
+	background-color:grey;
+	color: white;
+	padding: 0 0;
+}
+#t2{
+	padding:0 0;
+	position: fixed;
+	top: 30%;
+	right:10%;
+	width:10%;
+	font-size: 15px;
+	color: #f4a442;
+	list-style-type: none;
+
+
+}

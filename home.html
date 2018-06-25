@@ -1,0 +1,94 @@
+<html>
+<head>
+    <link rel="stylesheet" href="layout.css">
+<title>Home</title>
+<style>
+
+    #t1 #home{
+        font-size: 200%;
+        background-color:Green;
+        color: white;
+
+    }
+    #date,h4,#dish,#lamb{
+        text-align: center;
+    }
+    #news{
+	padding:0 0;
+	position: fixed;
+	top: 30%;
+	right:10%;
+	width:10%;
+	height:60%;
+	font-size: 15px;
+	font-style: italic;
+	color: #f4a442;
+	}
+    iframe{
+        margin: auto;
+        display: block;
+    }
+    #pic1{
+        background-image: url("hot_sour_soup.jpg");
+        background-size: cover;
+        position: relative;
+        width: 10%;
+        height: 10%;
+        top: 20%;
+        left: 10%;
+    }
+</style>
+</head>
+<body>
+<div id= "header">
+    <a href="home.html"> <img  id="logo" src="Logo.jpg" alt="Logo pic"></a>
+</div>
+<div id="toolBar">
+<ul id="t1">
+<li><a id = "home" href="home.html">Home</a></li>
+<li><a id = "menu" href="menu.html">Menu</a></li>
+<li><a id = "schedule" href="schedule.html">Schedule</a></li>
+<li><a id = "order" href="order.html">Order</a></li>
+<li><a id = "contact" href="contact.html">Contact</a></li>
+<li><a id ="help" href="help.html">Help</a></li>
+</ul>
+</div>
+<div class="content">
+<h2 >About WS</h2>
+    <p>Welcome to <em>WS Restaurant</em>. Located in the downtown Atlanta, We pick ingredients carefully and use only the freshest and natural ones to prepare every dish, and have been trying to cook them in a healthier way to provide the most nutritious food.</p>
+    <p>We serve various kinds of Chinese foods and cuisines and specialize in Dim Sum.</p>
+    <iframe width="50%" height="30%" src="https://www.youtube.com/embed/jq4dZmrXz84"></iframe>
+
+</div>
+<div id="news">
+    <p id = "date"></p>
+    <p id="lamb">Our home-made mystery roast lamb is coming soon, please reserve in advance.</p>
+    <h4>Today's Special:</h4>
+    <p id ="dish"></p>
+</div >
+<script>
+var dishes= [];
+dishes[0]="Steamed Sausage Rolls<br>Steamed Soup Dumplings<br>Shrimp Dumplings<br>Steamed Pork Bean curd<br>Steamed Chicken Feet";
+dishes[1]="Fried Pork Ball<br>Fried Taro Root w/pork<br>Pan Fried Radish Cake<br>Pan Fried Sticky Rice<br>Steamed Sticky Rice w/pork,chicken,and sausage";
+dishes[2]="Mango Pudding<br>Coconut Pudding<br>Soy Milk w/sesame/peanut<br>Sweet Tofu<br>Double Boiled Milk Pudding";
+dishes[3]="Baked Egg Tarts<br>BBQ Pork Puffs<br>Spring Rolls<br>Fried Sesame Balls<br>Spring Rolls";
+dishes[4]="Baked Pork Buns<br>Steamed Pork Buns<br>Steamed Pork Ribs<br>Steamed Beef Ribs<br>Steamed Beef Tripe";
+dishes[5]="Roasted Duck<br>Stir Fried Rice Noodle<br>Stir Fried Radish Cake<br>Steamed Shrimp Rice Noodle Roll<br>Steamed Beef Rice Noodle Roll<br>Steamed Pork Rice Noodle Roll";
+dishes[6]="Roasted Duck<br>Stir Fried Rice Noodle<br>Stir Fried Radish Cake<br>Steamed Shrimp Rice Noodle Roll<br>Steamed Beef Rice Noodle Roll<br>Steamed Pork Rice Noodle Roll";
+var date = new Date();
+document.getElementById("date").innerHTML = date.toDateString();
+day = date.getDay();
+for(var i=0; i<dishes.length; i++){
+	if(i == day-1){
+		if(dishes[i]==undefined){
+			document.getElementById("dish").innerHTML = "Sorry, we 	are closed today";
+		}
+		else{
+			document.getElementById("dish").innerHTML = dishes[i];
+		}
+	}
+}
+</script>
+
+</body>
+</html>

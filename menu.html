@@ -1,0 +1,207 @@
+<html>
+<head>
+<title>Menu</title>
+    <link rel="stylesheet" href="layout.css">
+<style>
+    #search{
+        width: 50%;
+       height: 30%;
+        font-size: 200%;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        text-align: center;
+        outline: none;
+    }
+	#t1 #menu{
+	font-size: 200%;
+	background-color:Green;
+	color: white;
+
+	} 
+    #submit{
+        border: none;
+        background-color: cyan;
+        text-align: center;
+        margin: auto;
+        display:block;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 15px 25px;
+    }
+    #submit:hover{
+        border: solid crimson;
+    }
+    .list{
+        list-style-type: none;
+        font-size: small;
+    }
+</style>
+</head>
+<body>
+
+<div id= "header">
+    <a href="home.html"> <img  id="logo" src="Logo.jpg" alt="Logo pic"></a>
+</div>
+<div id="toolBar">
+<ul id="t1">
+<li><a id = "home" href="home.html">Home</a></li>
+<li><a id = "menu" href="menu.html">Menu</a></li>
+<li><a id = "schedule" href="schedule.html">Schedule</a></li>
+<li><a id = "order" href="order.html">Order</a></li>
+<li><a id = "contact" href="contact.html">Contact</a></li>
+<li><a id ="help" href="help.html">Help</a></li>
+</ul>
+</div>
+<div class="content">
+   <!--form action="order.html" method="GET">-->
+    <input id="search" type="text" onkeyup="finddish()" placeholder="Please enter a dish name">
+<h2 id = "soup">soup</h2>
+<ul class="list">
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "WONTON SOUP-2.99"  name = "m"> WONTON SOUP-2.99 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "EGG DROP SOUP-2.99" name = "m"> EGG DROP SOUP-2.99 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SIZZLING RICE SOUP-3.99" name = "m"> SIZZLING RICE SOUP-3.99 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CRAB MEAT AND FISH MAW SOUP-6.99" name = "m"> CRAB MEAT AND FISH MAW SOUP-6.99 </input></label></li>
+
+</ul>
+
+
+<h2 id = "chicken"> Chicken </h2>
+<ul class="list">
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SWEET AND SOUR PORK-11.95"  name = "m"> SWEET AND SOUR PORK-11.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "PEKING STYLE PORK CHOP-11.95" name = "m"> PEKING STYLE PORK CHOP-11.95</input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SALT AND PEPPER PORK CHOP-11.95" name = "m"> SALT AND PEPPER PORK CHOP-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "STEAMED SPARE RIBS WITH BLACK BEAN SAUCE-11.95" name = "m"> STEAMED SPARE RIBS WITH BLACK BEAN SAUCE-11.95</input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "TWICE COOKED PORK-11.95" name = "m"> TWICE COOKED PORK-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SPICY GARLIC PORK-11.95" name = "m"> SPICY GARLIC PORK-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "MA PO BEAN CURD-11.95" name = "m"> MA PO BEAN CURD-11.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "HOG CHITLING WITH GREEN PEPPER AND BLACK BEAN SAUCE-11.95" name = "m"> HOG CHITLING WITH GREEN PEPPER AND BLACK BEAN SAUCE-11.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "HOG CHITLING WITH SOUR MUSTARD GREEN-11.95" name = "m"> HOG CHITLING WITH SOUR MUSTARD GREEN-11.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "STEAMED PRESERVED VEGETABLE WITH PORK-11.95" name = "m"> STEAMED PRESERVED VEGETABLE WITH PORK-11.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SEASONING SAUTEED GREEN BEAN-11.95" name = "m"> SEASONING SAUTEED GREEN BEAN-11.95</input></label></li>
+</ul>
+
+<h2 id = "beef"> Beef </h2>
+<ul class="list">
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "FILLET STEAK-16.95"  name = "m"> FILLET STEAK-16.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH MIXED VEGETABLE-12.95" name = "m"> BEEF WITH MIXED VEGETABLE-12.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH OYSTER SAUCE-12.95" name = "m"> BEEF WITH OYSTER SAUCE-12.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH BLACK PEPPER-12.95" name = "m"> BEEF WITH BLACK PEPPER-12.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH CHINESE BROCCOLI-12.95" name = "m"> BEEF WITH CHINESE BROCCOLI-12.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH BROCCOLI-12.95" name = "m"> BEEF WITH BROCCOLI-12.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH BITTER MELON-12.95" name = "m"> BEEF WITH BITTER MELON-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH ABALONE MUSHROOM-12.95"  name = "m"> BEEF WITH ABALONE MUSHROOM-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH SPINACH-12.95" name = "m"> BEEF WITH SPINACH-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH ASPARAGUS-12.95" name = "m"> BEEF WITH ASPARAGUS-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH SNOW PEA-12.95" name = "m"> BEEF WITH SNOW PEA-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH SOUR MUSTARD GREEN-12.95" name = "m"> BEEF WITH SOUR MUSTARD GREEN-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SINGAPORE SAUCE BEEF-12.95" name = "m"> SINGAPORE SAUCE BEEF-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH BLACK BEAN SAUCE-12.95" name = "m"> BEEF WITH BLACK BEAN SAUCE-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF TRIPE WITH SOUR MUSTARD GREEN-12.95" name = "m"> BEEF TRIPE WITH SOUR MUSTARD GREEN-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "BEEF WITH GREEN BEAN-12.95" name = "m"> BEEF WITH GREEN BEAN-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "MONGOLIAN BEEF-12.95" name = "m"> MONGOLIAN BEEF-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "PEPPER STEAK-12.95" name = "m"> PEPPER STEAK-12.95 </input></label></li>
+</ul>
+
+<h2 id = "pork"> Pork </h2>
+<ul class="list">
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SWEET AND SOUR CHICKEN-11.95"  name = "m"> SWEET AND SOUR CHICKEN-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "HOT BRAISED CHICKEN WINGS-11.95" name = "m"> HOT BRAISED CHICKEN WINGS-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "HOT AND SPICY CHICKEN-11.95" name = "m"> HOT AND SPICY CHICKEN-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "GENERAL TSAO CHICKEN-11.95" name = "m"> GENERAL TSAO CHICKEN-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH BROCCOLI-11.95" name = "m"> CHICKEN WITH BROCCOLI-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CURRY CHICKEN-11.95" name = "m"> CURRY CHICKEN-11.95 </input></label></li>
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH SPINACH-11.95" name = "m"> CHICKEN WITH SPINACH-11.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH BLACK BEAN SAUCE-11.95" name = "m"> CHICKEN WITH BLACK BEAN SAUCE-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH GREEN BEAN-12.95" name = "m"> CHICKEN WITH GREEN BEAN-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH SNOW PEA-12.95" name = "m"> CHICKEN WITH SNOW PEA-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH ASPARAGUS-12.95" name = "m"> CHICKEN WITH ASPARAGUS-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SALT & PEPPER CRISPY FRIED CHICKEN(BONE IN)-12.95" name = "m"> SALT & PEPPER CRISPY FRIED CHICKEN(BONE IN)-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SPICY GRALIC CHICKEN-12.95" name = "m"> SPICY GRALIC CHICKEN-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CHICKEN WITH PLUM SAUCE-12.95" name = "m"> CHICKEN WITH PLUM SAUCE-12.95 </input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "KUNG PAO CHICKEN-12.95" name = "m"> KUNG PAO CHICKEN-12.95 </input></label></li>
+</ul>
+
+<h2 id = "seaFood"> Sea Food </h2>
+<ul class="list">
+<li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SCALLOP WITH GINER & SCALLION-14.95"  name = "m"> SCALLOP WITH GINER & SCALLION-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SCALLOP WITH BLACK BEAN SAUCE-14.95"  name = "m"> SCALLOP WITH BLACK BEAN SAUCE-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SAUTEED SCALLOP WITH VEGETABLE-14.95"  name = "m"> SAUTEED SCALLOP WITH VEGETABLE-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SALT & PEPPER SCALLOP-14.95"  name = "m"> SALT & PEPPER SCALLOP-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CLAM WITH BLACKE BEAN SAUCE-14.95"  name = "m"> CLAM WITH BLACKE BEAN SAUCE-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CLAM WITH GINGER SCALLION-14.95"  name = "m"> CLAM WITH GINGER SCALLION-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "CRAB MEAT WITH SNOW PEA LEAF-17.95"  name = "m"> CRAB MEAT WITH SNOW PEA LEAF-17.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SALT & PEPPER SQUID-11.95"  name = "m"> SALT & PEPPER SQUID-11.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "OYSTER WITH GREEN PEPPER AND BLACK BEAN SAUCE-14.95"  name = "m"> OYSTER WITH GREEN PEPPER AND BLACK BEAN SAUCE-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "DEEP FRIED OYSTER-14.95"  name = "m"> DEEP FRIED OYSTER-14.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "KUNG PAO SHRIMP-13.95"  name = "m"> KUNG PAO SHRIMP-13.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SHRIMP WITH CASHEW NUTS-13.95"  name = "m"> SHRIMP WITH CASHEW NUTS-13.95</input></label></li>
+    <li class="searchlist"><label><input class = "MCB" type = "checkbox" value = "SHRIMP WITH BROCCOLI-13.95"  name = "m"> SHRIMP WITH BROCCOLI-13.95</input></label></li>
+</ul>
+    <button id = "submit" onclick="sub()"> Place your order</button>
+
+
+</div>
+<div id = "dirBar">
+<ul id="t2">
+<li><a id = "sp" href="#soup">Soup</a></li>
+<li><a id = "ck" href="#chicken">Chicken</a></li>
+<li><a id = "bf" href="#beef">Beef</a></li>
+<li><a id = "pk" href="#pork">Pork</a></li>
+<li><a id = "sf" href="#seaFood">Sea Food</a></li>
+</ul>
+</div>
+<script>
+/*    var menuObj = [];
+
+    for (var i = 0; i<checklist.length; i++){
+        var temp= checklist[i].value.split("-");
+        var tem = {"name":temp[0], "price":temp[1]};
+        menuObj[i] = tem;
+    }
+    var menu= {"menu": menuObj};
+    var mymenu =JSON.stringify(menu);
+    window.location="G:/Study/CSC4370/Project2/menu.txt"+mymenu;
+    */
+
+    function finddish() {
+        var searchitem = document.getElementById("search");
+        var checklist = document.getElementsByClassName("MCB");
+        var list = document.getElementsByClassName("searchlist")
+        for (var i = 0; i<checklist.length; i++){
+            var temp = checklist[i].value.split("-");
+            if (temp[0].toLowerCase().search(searchitem.value.toLowerCase())==-1){
+                list[i].style.display="none";
+            }
+            else {
+                list[i].style.display="block";
+            }
+        }
+
+    }
+    function sub(){
+        var pass=false;
+        var ordered=[];
+        var orderStr="";
+        var checklist = document.getElementsByClassName("MCB");
+        for (var i = 0; i < checklist.length; i++) {
+            if (checklist[i].checked==true) {
+                //ordered.push(checklist[i].value);
+                var temp = checklist[i].value.split("-");
+               ordered.push( {name: temp[0], price: temp[1]});
+               orderStr =orderStr+"\n"+temp[0];
+               pass=true;
+            }
+        }
+        if(pass) {
+            var r = confirm("do you really want to submit your order? \n" + orderStr);
+            if (r == true) {
+                var menu = {ordered: ordered};
+                var mymenu = JSON.stringify(menu);
+                localStorage.setItem("orderedItem", mymenu);
+                window.location.assign("order.html");
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href="layout.css">
+    <title>Order</title>
+    <style>
+        #t1 #order{
+            font-size: 200%;
+            background-color:Green;
+            color: white;
+
+        }
+        #tax,#ord,#subtotal{
+            text-align: right;
+        }
+        #price{
+            font-size: 20px;
+            text-align: right;
+            font-weight: bold;
+        }
+        #card,#cash{
+            display: none;
+        }
+        #checkout{
+            display: none;
+            //margin: auto;
+            position: relative;
+            top:20%;
+            padding:10px 10px;
+            font-size: 20px;
+            width: 50%;
+        }
+        .ck{
+            border: none;
+            background-color: lavenderblush;
+            text-align: center;
+            display:block;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 15px 25px;
+        }
+        .ck:hover{
+            border: solid crimson;
+        }
+        #GC{
+            display: none;
+	        float:right;
+        }
+        ul{
+            list-style-type: none;
+            font-size: small;
+
+        }
+    </style>
+</head>
+<body>
+<div id= "header">
+    <a href="home.html"> <img  id="logo" src="Logo.jpg" alt="Logo pic"></a>
+
+</div>
+<div id="toolBar">
+    <ul id="t1">
+        <li><a id = "home" href="home.html">Home</a></li>
+        <li><a id = "menu" href="menu.html">Menu</a></li>
+        <li><a id = "schedule" href="schedule.html">Schedule</a></li>
+        <li><a id = "order" href="order.html">Order</a></li>
+        <li><a id = "contact" href="contact.html">Contact</a></li>
+        <li><a id ="help" href="help.html">Help</a></li>
+    </ul>
+</div>
+<div class="content">
+    <h2 id = "note">Please order from menu.</h2>
+    <p id ="ord"></p>
+    <p id="subtotal"></p>
+    <p id = "tax"></p>
+
+    <hr>
+    <p id="price"></p>
+    <button id = "GC" onclick="GoCheck()" >Check Out</button>
+    <h1 class="success"></h1>
+    <p class="success"></p>
+
+
+    <div id ="checkout">
+
+        <input  type="radio" name="CKI" value="cash"  onclick="check(this.value)"> Pay by Cash<br>
+        <input type="radio" name="CKI" value="card" onclick="check(this.value)"> Pay by Card<br>
+        <div id = "cash">
+            <form action="javascript: success()">
+            <p>Pay at Restaurant</p>
+                <ul>
+                    <li><label>Name: <input type = "text"   name = "Name" size="20" maxlength="20" minlength="2" required></label></li>
+                    <li><label>Phone Number: <input type = "text"   name = "phoneNumber"  size="10"  maxlength="10" minlength="10" required></label></li>
+                </ul>
+                <p><input class="ck" type="submit" value="Submit"></p>
+            </form>
+        </div>
+
+        <div id = "card">
+            <form action="javascript: success()">
+                <ul>
+                    <li><label>Card Holder: <input type = "text"   name = "cardHolder" size="20" maxlength="20" minlength="2" required></label></li>
+                    <li><label>Phone Number: <input type = "text"   name = "phoneNumber"  size="10"  maxlength="10" minlength="10" required></label></li>
+                    <li><label>Card Number: <input type="text" name="cardNum" size="16" maxlength="16" minlength="16" required></label></li>
+                    <li><label>Expired Month: <select name="expM" size="1" required>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select></label></li>
+                    <li><label> Expired Year: <input type="number" name = "expY" min="2017" max="2037" ></label></li>
+                    <li><label>CVV: <input type="text" name="cardNum" size="3" maxlength="3" minlength="3" required></label></li>
+                </ul>
+            <p><input class="ck" type="submit" value="Submit"></p>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+   var order = localStorage.getItem("orderedItem");
+   localStorage.removeItem( "orderedItem" );
+   var ordered = JSON.parse(order);
+   var ord = "";
+   var sum = 0;
+   if (ordered.ordered.length==0){
+       document.getElementById("note").innerHTML="You didn't order anything!"
+   }
+   else {
+       document.getElementById("note").innerHTML="Please confirm your Order"
+       for (var i = 0; i < ordered.ordered.length; i++) {
+           ord = ord + ordered.ordered[i].name + "-------" + ordered.ordered[i].price + "<br>";
+           sum = sum + parseFloat(ordered.ordered[i].price);
+       }
+       sum=parseFloat(sum.toFixed(2));
+       var tax = (sum * 0.07).toFixed(2);
+       var after = (sum + parseFloat(tax)).toFixed(2);
+       document.getElementById("ord").innerHTML = ord;
+       document.getElementById("subtotal").innerHTML = "Sub Total: $" + sum;
+       document.getElementById("tax").innerHTML = "Tax(7%): $" + tax;
+
+       document.getElementById("price").innerHTML = "Total:" + "$" + after;
+   }
+   document.getElementById("GC").style.display="Inline";
+   function GoCheck() {
+       document.getElementById("checkout").style.display="block";
+       document.getElementById("GC").style.display="none";
+   }
+   function check(value) {
+       if (value == "cash"){
+           document.getElementById("card").style.display ="none";
+           document.getElementById("cash").style.display ="inline";
+       }
+       else {
+           document.getElementById("cash").style.display="none";
+           document.getElementById("card").style.display ="inline";
+       }
+
+   }
+   function success(){
+	document.getElementById("note").innerHTML="";
+	document.getElementById("checkout").innerHTML="";
+	var x=document.getElementsByClassName("success");
+	x[0].innerHTML="Your order is placed.";
+	x[1].innerHTML="We will call you when your order is ready.";
+
+   }
+</script>
+</body>
+</html>
